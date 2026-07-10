@@ -5,6 +5,18 @@ An end-to-end Machine Learning project built for the Kaggle **House Prices - Adv
 This project focuses on predicting residential house prices using advanced regression models, feature engineering, hyperparameter optimization, and ensemble learning.
 
 ---
+## Key Highlights
+
+- End-to-end Machine Learning pipeline
+- Feature Engineering with domain-specific features
+- Ordinal & One-Hot Encoding
+- Skewness Reduction using Log Transformation
+- Hyperparameter Optimization using Optuna
+- CatBoost & XGBoost Regression Models
+- 10-Fold Cross Validation
+- Weighted Ensemble Learning
+- Kaggle Public Leaderboard Score: **0.11799**
+
 
 ## Project Overview
 
@@ -22,8 +34,66 @@ The workflow includes:
 - Cross-validation
 - Ensemble learning
 - Kaggle submission
+  
 
 ---
+
+```text
+                        HOUSE PRICES ML PIPELINE
+
+                     Kaggle House Prices Dataset
+                               │
+                               ▼
+                 Merge Train & Test Datasets
+         (Consistent preprocessing for both datasets)
+                               │
+                               ▼
+                  Missing Value Imputation (FillNA)
+                               │
+                               ▼
+                     Feature Engineering
+        ├─ House Age
+        ├─ Garage Age
+        ├─ Years Since Remodel
+        ├─ Total Finished Basement Area
+        ├─ Total Floor Area
+        ├─ Total Bathrooms
+        └─ Garage Area Per Car
+                               │
+                               ▼
+                  Skewness Reduction (log1p)
+                               │
+                               ▼
+                   Categorical Feature Encoding
+                 ├─ Ordinal Encoding
+                 └─ One-Hot Encoding
+                               │
+                               ▼
+              Split Back into Train & Test Sets
+                               │
+                               ▼
+            Log Transform Target (SalePrice → log)
+                               │
+                               ▼
+             Hyperparameter Optimization (Optuna)
+                 ├─ CatBoost Regressor
+                 └─ XGBoost Regressor
+                               │
+                               ▼
+          10-Fold Cross Validation (RMSE Evaluation)
+                               │
+                               ▼
+          Weighted Ensemble (80% CatBoost + 20% XGBoost)
+                               │
+                               ▼
+                 Generate Predictions on Test Set
+                               │
+                               ▼
+                  Kaggle Submission (submission.csv)
+                               │
+                               ▼
+              Public Leaderboard Score: 0.11799
+```
 
 ## Dataset
 
