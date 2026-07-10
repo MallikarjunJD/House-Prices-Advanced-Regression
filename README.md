@@ -181,6 +181,12 @@ This improved prediction stability and overall leaderboard performance.
 **Kaggle Public Leaderboard Score**
 
 **0.11799**
+![Kaggle Leaderboard](images/kaggle_leaderboard.png)
+![Kaggle Leaderboard](images/houseprice_notebook.png)
+<p align="center">
+  <img src="images/kaggle_leaderboard.png" width="900">
+  <img src="images/houseprice_notebook.png" width="900">
+</p>
 
 ---
 
